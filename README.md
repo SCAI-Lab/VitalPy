@@ -2,7 +2,7 @@
 
 Currently, the package supports PPG preprocessing and extraction of more than 400 features. The PPG pipeline was originally implemented for analysis of the AuroraBP database.
 
-It provides:
+**It provides:**
 - PPG preprocessing
 - PPG feature extraction ( >400 features)
 
@@ -56,3 +56,6 @@ Exemplary PPG keypoint extraction.
 
 ### Cite the paper as:
 
+Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring
+
+Ana Cisnal, Yanke Li, Bertram Fuchs, Mehdi Ejtehadi, Robert Riener, and Diego Paez-Granados
