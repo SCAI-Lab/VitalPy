@@ -84,7 +84,7 @@ class PPGSignal:
             dict: A dictionary containing the extracted features from the signal.
                   The dictionary includes both waveform-based features and spectral features.
         """
-
+        self.show = True
         wave_features_list = []
         for template in self.preprocessed_signal:
             # Extract features from single waveforms
@@ -140,4 +140,6 @@ class PPGSignal:
             ppg_df = pd.DataFrame(ppg_feat)
             feat_means = ppg_df.mean().to_dict()
             feat_means.update(spectral_meas)
+            if self.show:
+                print(feat_means)
             return feat_means
