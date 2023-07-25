@@ -2,7 +2,12 @@
 
 Currently, the package supports PPG preprocessing and extraction of more than 400 features. The PPG pipeline was originally implemented for analysis of the AuroraBP database.
 
+It provides:
+- PPG preprocessing
+- PPG feature extraction ( >400 features)
+
 ### Use
+----------------------
 
 Navigate to the Python repository and install the required packages:
 
@@ -26,7 +31,8 @@ Get features:
 
 
 
-### Example plots for a AuroraBP signal:
+### Example plots for a AuroraBP signal
+----------------------
 
 Used file: measurements_oscillometric/o001/o001.initial.Sitting_arm_down.tsv
 
