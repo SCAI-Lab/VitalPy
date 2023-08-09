@@ -13,7 +13,7 @@ Currently, the package supports PPG preprocessing and extraction of more than 40
 
 ## Use
 
-Navigate to the Python repository and install the required packages:
+VitalPy is written in Python (3.9+). Navigate to the Python repository and install the required packages:
 
 ```pip install -r requirements.txt```
 
