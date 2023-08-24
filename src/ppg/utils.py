@@ -140,12 +140,12 @@ def plot_key_points(ax: Axes, template: np.ndarray, timeline: np.ndarray, points
     """
 
     ax.plot(timeline, template)
-    ax.plot(points['v'] / fs, template[points['v']], 'bo', label='V')
-    ax.plot(points['md2'] / fs, template[points['md2']], 'yo', label="MD2")
+    ax.plot(points['o'] / fs, template[points['o']], 'bo', label='O')
+    ax.plot(points['a'] / fs, template[points['a']], 'yo', label="a")
     ax.plot(points['md'] / fs, template[points['md']], 'go', label='MD')
-    ax.plot(points['b'] / fs, template[points['b']], 'co', label="B")
+    ax.plot(points['b'] / fs, template[points['b']], 'co', label="b")
     ax.plot(points['s'] / fs, template[points['s']], 'ro', label='S')
-    ax.plot(points['n'] / fs, template[points['n']], 'mo', label="DN")
+    ax.plot(points['dn'] / fs, template[points['dn']], 'mo', label="DN")
     if points['ip'] == points['d']:
         ax.plot(points['ip'] / fs, template[points['ip']], 'co', label="IP")
     else:
