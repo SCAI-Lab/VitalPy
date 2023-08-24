@@ -8,8 +8,10 @@
 Currently, the package supports PPG preprocessing and extraction of more than 400 features. The PPG pipeline was originally implemented for analysis of the AuroraBP database.
 
 **It provides:**
-- PPG preprocessing
-- PPG feature extraction ( >400 features)
+- PPG preprocessing: Singal quality metrics, baseline extraction, etc.
+- PPG feature extraction: time-domain, frequency-domain, statistical features ( >400 features)
+- Compatibility with PPG recorded from 128 Hz to 500 Hz: tested with local devices and large datasets.
+
 
 ## Use
 
