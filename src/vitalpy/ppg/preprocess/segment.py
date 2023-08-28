@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from scipy.signal import argrelmax, argrelmin
-from src.ppg.params import PPG_PEAK_DETECTION_THRESHOLD
+from src.vitalpy.ppg.params import PPG_PEAK_DETECTION_THRESHOLD
 
 
 def find_extremum(waveform: pd.Series, show: bool = False):

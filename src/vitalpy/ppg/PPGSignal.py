@@ -1,10 +1,10 @@
 import pandas as pd
 
-from src.ppg.features.utils import extract_key_points, extract_spectral
-from src.ppg.preprocess.Preprocessor import Preprocessor
-from src.ppg.params import PPG_SAMPLE_RATE, MIN_TEMPLATES
-from src.ppg.features.FeatureExtractor import PlottingFeatureExtractor, FeatureExtractor
-from src.ppg.preprocess.concatenate import clean_valid_dataset
+from src.vitalpy.ppg.features.utils import extract_key_points, extract_spectral
+from src.vitalpy.ppg.preprocess.Preprocessor import Preprocessor
+from src.vitalpy.ppg.params import PPG_SAMPLE_RATE, MIN_TEMPLATES
+from src.vitalpy.ppg.features.FeatureExtractor import PlottingFeatureExtractor, FeatureExtractor
+from src.vitalpy.ppg.preprocess.concatenate import clean_valid_dataset
 
 
 class PPGSignal:

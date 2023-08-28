@@ -1,5 +1,5 @@
 import numpy as np
-from src.ppg.params import MINIMUM_PULSE_CYCLE, MAXIMUM_PULSE_CYCLE
+from src.vitalpy.ppg.params import MINIMUM_PULSE_CYCLE, MAXIMUM_PULSE_CYCLE
 
 
 def validate_template(template: np.ndarray, fs: float) -> bool:

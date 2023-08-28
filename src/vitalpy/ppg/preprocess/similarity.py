@@ -3,8 +3,8 @@ import pandas as pd
 from scipy import stats
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
-import src.ppg.utils as utils
-from src.ppg.params import MIN_MAX_EUC_DIST_THRESHOLD, PPG_SAMPLE_RATE, Z_SCORE_EUC_DIST_THRESHOLD
+import src.vitalpy.ppg.utils as utils
+from src.vitalpy.ppg.params import MIN_MAX_EUC_DIST_THRESHOLD, PPG_SAMPLE_RATE, Z_SCORE_EUC_DIST_THRESHOLD
 
 
 def euclidian_analysis(valid_data: list, fs: float = PPG_SAMPLE_RATE, norm_method: str = 'zscore',

@@ -1,6 +1,6 @@
 import pandas as pd
 import os.path
-from src.ppg.PPGSignal import PPGSignal
+from src.vitalpy.ppg import PPGSignal
 
 DATA_DIR = 'CHANGE'
 
@@ -20,4 +20,3 @@ signal.check_keypoints()
 signal = PPGSignal(waveform_df, verbose=0)
 features = signal.extract_features()
 print(features)
-

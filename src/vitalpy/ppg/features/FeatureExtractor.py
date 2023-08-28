@@ -1,6 +1,6 @@
-import src.ppg.features.utils as feature
-from src.ppg.preprocess.concatenate import clean_valid_dataset
-from src.ppg.preprocess.polyfit import template_polyfit, template_double_polyfit
+import src.vitalpy.ppg.features.utils as feature
+from src.vitalpy.ppg.preprocess.concatenate import clean_valid_dataset
+from src.vitalpy.ppg.preprocess.polyfit import template_polyfit, template_double_polyfit
 
 
 class FeatureExtractor:
