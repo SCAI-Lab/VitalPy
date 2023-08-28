@@ -1,7 +1,6 @@
 <h1 align="center">
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/7b9e24c3-a3fd-412a-830c-e3aa708ad9b0" width="500">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/e8a006a2-9f84-4fc4-abd0-e3d9ebfb37d0" width="500">
 </h1><br>
-
 
 # VitalPy: A Vital Signal Analysis Package
 
