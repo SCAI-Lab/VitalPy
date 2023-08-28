@@ -45,19 +45,19 @@ Used file: measurements_oscillometric/o001/o001.initial.Sitting_arm_down.tsv
 
 The following figure shows the mean template computed from all templates within the signal given as input.
 
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/5a8136b0-f9fc-49a4-b345-d2609a5113de" width="650">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/9ede79d8-2613-47b6-a1ca-b5247c417cfc" width="650">
 
 #### Preprocessing steps
 
 All preprocessing steps are depicted. The final result should have filtered out all low quality waveforms.
 
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/f9e518d6-4fa7-4a7b-b9f8-990c20b87a51" width="700">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/ecc0a2ea-b4e8-4f67-a4b2-05232de1f81c" width="700">
 
 #### PPG Keypoints
 
 Exemplary PPG keypoint extraction.
 
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/84c44e52-2a07-4faf-b142-45a8e17486ee" width="800">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/93e17375-e5c3-44a3-a437-63aa9bbb2262" width="800">
 
 ## License
 
