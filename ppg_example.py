@@ -1,11 +1,8 @@
 import pandas as pd
-import os.path
-from src.vitalpy.ppg import PPGSignal
-
-DATA_DIR = 'CHANGE'
+from src.vitalpy.ppg.PPGSignal import PPGSignal
 
 # Load an example signal from the AuroraBP database
-waveform_df = pd.read_csv(os.path.join(DATA_DIR, '/measurements_oscillometric/o000/o000.initial.Sitting_arm_down.tsv'), delimiter='\t')
+waveform_df = pd.read_csv('D:/DATA/BP_DATA/AuroraBP/measurements_oscillometric/o000/o000.initial.Sitting_arm_down.tsv', delimiter='\t')
 waveform_df = waveform_df.rename(columns={'optical': 'ppg', 'ekg': 'ecg'})
 
 # The dataframe should have the columns 't' for time and 'ppg' for the ppg signal values.
