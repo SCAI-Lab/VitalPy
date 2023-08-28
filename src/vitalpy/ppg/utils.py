@@ -2,12 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 import pandas as pd
-from src.vitalpy.ppg.params import PPG_SAMPLE_RATE
 import scipy.fftpack
 from datetime import datetime
 import scipy.stats as stats
 import math
 import seaborn as sns
+
+from .params import PPG_SAMPLE_RATE
 
 
 def get_absolute_start_time(df: pd.DataFrame):

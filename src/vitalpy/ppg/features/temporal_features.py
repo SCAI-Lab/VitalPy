@@ -10,7 +10,7 @@ SoftwareX, 11 (2020), p. 100456
 
 import numpy as np
 import scipy
-import src.vitalpy.ppg.utils as utils
+from ...ppg import utils
 
 
 def autocorr(signal: np.ndarray) -> float:
