@@ -1,6 +1,6 @@
-from src.ppg.features.statistical_features import *
-from src.ppg.features.temporal_features import *
-from src.ppg.features.spectral_features import *
+from src.vitalpy.ppg.features.statistical_features import *
+from src.vitalpy.ppg.features.temporal_features import *
+from src.vitalpy.ppg.features.spectral_features import *
 
 """
 Set the features to be calculated.

@@ -1,13 +1,13 @@
 import pandas as pd
 from scipy import integrate, stats
 from scipy.signal import argrelmax, argrelmin
-import src.ppg.utils as utils
-from src.ppg.params import PPG_SAMPLE_RATE, POLY_COEFFS
+import src.vitalpy.ppg.utils as utils
+from src.vitalpy.ppg.params import PPG_SAMPLE_RATE, POLY_COEFFS
 import numpy as np
 from sklearn import preprocessing
 
 # default file for setting which features to calculate
-from src.ppg.features.features_config import STATISTIC_FEATURES, TEMPORAL_FEATURES, SPECTRAL_FEATURES, X_VALUES_BW_FEATURES
+from src.vitalpy.ppg.features.features_config import STATISTIC_FEATURES, TEMPORAL_FEATURES, SPECTRAL_FEATURES, X_VALUES_BW_FEATURES
 
 
 def extract_coeffs(single_wave: np.ndarray, fs: int = PPG_SAMPLE_RATE) -> dict:
