@@ -8,12 +8,14 @@
 Currently, the package supports PPG preprocessing and extraction of more than 400 features. The PPG pipeline was originally implemented for analysis of the AuroraBP database.
 
 **It provides:**
-- PPG preprocessing
-- PPG feature extraction ( >400 features)
+- PPG preprocessing: Singal quality metrics, baseline extraction, etc.
+- PPG feature extraction: time-domain, frequency-domain, statistical features ( >400 features)
+- Compatibility with PPG recorded from 128 Hz to 500 Hz: tested with local devices and large datasets.
+
 
 ## Use
 
-Navigate to the Python repository and install the required packages:
+VitalPy is written in Python (3.9+). Navigate to the Python repository and install the required packages:
 
 ```pip install -r requirements.txt```
 
@@ -63,6 +65,15 @@ VitalPy is available under the General Public License v3.0.
 
 ## Citation
 
-Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring
+If you use this repository or any of its components and/or our paper as part of your research, please cite the publication as follows:
+> A. Cisnal*et al.* "Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring," *IEEE J Biomed Health Inform*, Under Review (2023).
 
-Ana Cisnal, Yanke Li, Bertram Fuchs, Mehdi Ejtehadi, Robert Riener, and Diego Paez-Granados
+```
+@unpublished{vitalpy,
+  title={Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring},
+  author={Cisnal, Ana and Li, Yanke and Fuchs, Bertram and Ejtehadi, Mehdi and Riener, Robert and Paez-Granados, Diego},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  year={2023},
+  note = "Under review"
+}
+```
