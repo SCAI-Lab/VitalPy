@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vitalpy"
+version = "0.1.0"
+authors = [
+    { name="Ana Cisnal", email="cisnal@ieee.org" },
+  { name="Bertram Fuchs", email="bfuchs@student.ethz.ch" },
+    { name="Diego Paez-Granados", email="diego.paez@hest.ethz.ch" },
+]
+description = "VitalPy: A Vital Signal Analysis Package"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/SCAI-Lab/VitalPy"
+"Bug Tracker" = "https://github.com/SCAI-Lab/VitalPy/issues"
+
+[tool.poetry.dependencies]
+BaselineRemoval="0.1.4
+biosppy="1.0.0"
+matplotlib="3.7.1"
+numpy="1.25.0"
+pandas="1.5.3"
+scikit_learn="1.2.2"
+scipy="1.10.1"
+seaborn="0.12.2"
