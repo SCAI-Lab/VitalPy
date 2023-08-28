@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/e8a006a2-9f84-4fc4-abd0-e3d9ebfb37d0" width="500">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/e8a006a2-9f84-4fc4-abd0-e3d9ebfb37d0" width="550">
 </h1><br>
 
 # VitalPy: A Vital Signal Analysis Package
@@ -50,13 +50,13 @@ The following figure shows the mean template computed from all templates within 
 
 All preprocessing steps are depicted. The final result should have filtered out all low quality waveforms.
 
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/ecc0a2ea-b4e8-4f67-a4b2-05232de1f81c" width="700">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/ecc0a2ea-b4e8-4f67-a4b2-05232de1f81c" width="650">
 
 #### PPG Keypoints
 
 Exemplary PPG keypoint extraction.
 
-<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/93e17375-e5c3-44a3-a437-63aa9bbb2262" width="800">
+<img src="https://github.com/SCAI-Lab/VitalPy/assets/33239037/93e17375-e5c3-44a3-a437-63aa9bbb2262" width="650">
 
 ## License
 
