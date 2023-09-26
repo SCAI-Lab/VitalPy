@@ -134,7 +134,7 @@ def extract_key_temporal(waveform: pd.Series, fs: float, idx_points: dict,
 
     for x1 in all_names[1:8]:  # except 'o' and 'v' (always 0 and 1)
         # Normalized times (t_x1/t_v1)
-        feat_dict[f'nt_{x1}'] = idx_points[x1] / idx_points['v1']
+        feat_dict[f'nt_{x1}'] = idx_points[x1] / idx_points['v']
 
     comb = all_names[1:8]
     for idx1, x1 in enumerate(comb):  # except 'o' and 'v' (always 0 and 1)
@@ -150,14 +150,14 @@ def extract_key_temporal(waveform: pd.Series, fs: float, idx_points: dict,
             # interesting times such as diastolic time (DT) = tv-ts or tsd
             feat_dict[f't_{x1}_{x2}'] = feat_dict[f't_{x1}'] - feat_dict[f't_{x2}']
             # Normalized time ratio between x1 and x2 and total length. TR = (tx1-tx2)/tt
-            feat_dict[f'trn_{x1}_{x2}'] = feat_dict[f't_{x1}_{x2}'] / feat_dict['t_v1']
+            feat_dict[f'trn_{x1}_{x2}'] = feat_dict[f't_{x1}_{x2}'] / feat_dict['t_v']
 
     # SLOPE
     # Includes ascending slope (AS) (s-o)/(ts-to) and to=0
     for x1 in all_names[1:]:  # all names except 'v'
         feat_dict[f'slp_{x1}'] = (v_points[x1] - v_points['o']) / feat_dict[f't_{x1}']
         # feat_dict[f'n_slp_{x1}'] = feat_dict[f'ni_{x1}'] / feat_dict[f't_{x1}']
-        if x1 != 'v1':  # always 1
+        if x1 != 'v':  # always 1
             # feat_dict[f'nn_slp_{x1}'] = feat_dict[f'ni_{x1}'] / feat_dict[f'nt_{x1}']
             feat_dict[f'slp_{x1}_n'] = (v_points[x1] - v_points['o']) / feat_dict[f'nt_{x1}']
 
