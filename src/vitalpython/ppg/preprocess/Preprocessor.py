@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
-from src.vitalpy.ppg.params import MIN_TEMPLATES, PPG_SAMPLE_RATE
-from src.vitalpy.ppg.preprocess.filter_baseline import bandpass_filter, baseline_correction
-from src.vitalpy.ppg.preprocess.segment import segmentation
-from src.vitalpy.ppg.preprocess.similarity import euclidian_analysis
-from src.vitalpy.ppg.preprocess.validate import validate_waveform
+from ..params import MIN_TEMPLATES, PPG_SAMPLE_RATE
+from .filter_baseline import bandpass_filter, baseline_correction
+from .segment import segmentation
+from .similarity import euclidian_analysis
+from .validate import validate_waveform
 
 
 class Preprocessor:

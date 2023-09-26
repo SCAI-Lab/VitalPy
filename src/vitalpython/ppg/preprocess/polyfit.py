@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from src.vitalpy.ppg.params import POLY_COEFFS, POLY_COEFFS_DIAS, POLY_COEFFS_SYS
-from src.vitalpy.ppg.utils import derivative
+from ..params import POLY_COEFFS, POLY_COEFFS_DIAS, POLY_COEFFS_SYS
+from ..utils import derivative
 
 
 def template_polyfit(template: pd.Series, fs, n_coeff: int = POLY_COEFFS,

@@ -3,8 +3,8 @@ import pandas as pd
 from scipy import stats
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
-import src.vitalpy.ppg.utils as utils
-from src.vitalpy.ppg.params import MIN_MAX_EUC_DIST_THRESHOLD, PPG_SAMPLE_RATE, Z_SCORE_EUC_DIST_THRESHOLD
+from ..utils import timeline
+from ..params import MIN_MAX_EUC_DIST_THRESHOLD, PPG_SAMPLE_RATE, Z_SCORE_EUC_DIST_THRESHOLD
 
 
 def euclidian_analysis(valid_data: list, fs: float = PPG_SAMPLE_RATE, norm_method: str = 'zscore',
@@ -105,12 +105,12 @@ def euclidian_analysis(valid_data: list, fs: float = PPG_SAMPLE_RATE, norm_metho
         re_mean_waveform = np.nanmean(euc_valid_plot, axis=0)
         cut_mean_wave = re_mean_waveform[max_peak_idx - mean_repeak_idx:-1]
         cut_mean_wave = cut_mean_wave[0:mean_relen_wave]
-        mean_waveform_pd = pd.Series(cut_mean_wave, index=utils.timeline(cut_mean_wave, fs))
+        mean_waveform_pd = pd.Series(cut_mean_wave, index=timeline(cut_mean_wave, fs))
 
     if show:
         if len(euc_valid_waveforms) == 0:
             # only show the disaster
-            time = utils.timeline(mean_waveform, fs)
+            time = timeline(mean_waveform, fs)
             fig = plt.figure(figsize=(5, 5))
             ax = fig.add_subplot(1, 1, 1)
             for wave in waveforms:
@@ -126,7 +126,7 @@ def euclidian_analysis(valid_data: list, fs: float = PPG_SAMPLE_RATE, norm_metho
                       [label for i, label in enumerate(labels) if i in display], loc='best')
 
         else:
-            time = utils.timeline(mean_waveform, fs)
+            time = timeline(mean_waveform, fs)
             fig = plt.figure(figsize=(12, 5))
             ax = fig.add_subplot(1, 2, 1)
             for wave in waveforms:
@@ -145,10 +145,10 @@ def euclidian_analysis(valid_data: list, fs: float = PPG_SAMPLE_RATE, norm_metho
             for wave in euc_valid_waveforms:
                 if norm_method == 'min_max':
                     wave_n = preprocessing.minmax_scale(wave.values, feature_range=(0, 1), axis=0, copy=False)
-                    ax.plot(utils.timeline(wave.values, fs), wave_n, color='lightblue', label='waveforms')
+                    ax.plot(timeline(wave.values, fs), wave_n, color='lightblue', label='waveforms')
                 elif norm_method == 'zscore':
                     wave_n = stats.zscore(wave.values)
-                    ax.plot(utils.timeline(wave.values, fs), wave_n, color='lightblue', label='waveforms')
+                    ax.plot(timeline(wave.values, fs), wave_n, color='lightblue', label='waveforms')
             ax.plot(mean_waveform_pd, color='royalblue', linewidth=2, label='Mean')
             ax.set_xlabel('Time (s)')
             ax.set_ylabel('PPG (a.u.)')
