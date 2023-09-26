@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "vitalpy"
+name = "vitalpython"
 version = "0.1.0"
 authors = [
     { name="Ana Cisnal", email="cisnal@ieee.org" },
@@ -24,7 +24,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/SCAI-Lab/VitalPy/issues"
 
 [tool.poetry.dependencies]
-BaselineRemoval="0.1.4
+BaselineRemoval="0.1.4"
 biosppy="1.0.0"
 matplotlib="3.7.1"
 numpy="1.25.0"

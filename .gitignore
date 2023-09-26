@@ -163,5 +163,5 @@ database.py
 databases.py
 PPG_example.ipynb
 PPG_files.py
-src/vitalpy/ppg/run.py
+src/vitalpython/ppg/run.py
 .idea
