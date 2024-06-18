@@ -65,7 +65,8 @@ VitalPy is available under the General Public License v3.0.
 ## Citation
 
 If you use this repository or any of its components and/or our paper as part of your research, please cite the publication as follows:
-> A. Cisnal*et al.* "Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring," *IEEE J Biomed Health Inform*, Under Review (2023).
+
+A. Cisnal, Y. Li, B. Fuchs, M. Ejtehadi, R. Riener and D. Paez-Granados, "Robust Feature Selection for BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring," in IEEE Journal of Biomedical and Health Informatics, doi: 10.1109/JBHI.2024.3411693.
 
 ```
 @ARTICLE{10552318,
