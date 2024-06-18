@@ -68,11 +68,14 @@ If you use this repository or any of its components and/or our paper as part of 
 > A. Cisnal*et al.* "Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring," *IEEE J Biomed Health Inform*, Under Review (2023).
 
 ```
-@unpublished{vitalpy,
-  title={Robust Feature Selection for Continuous BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring},
+@ARTICLE{10552318,
   author={Cisnal, Ana and Li, Yanke and Fuchs, Bertram and Ejtehadi, Mehdi and Riener, Robert and Paez-Granados, Diego},
-  journal={IEEE Journal of Biomedical and Health Informatics},
-  year={2023},
-  note = "Under review"
-}
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={Robust Feature Selection for BP Estimation in Multiple Populations: Towards Cuffless Ambulatory BP Monitoring}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Feature extraction;Estimation;Statistics;Sociology;Noise;Morphology;Monitoring;Cuffless blood pressure;photoplethysmography;pulse wave analysis},
+  doi={10.1109/JBHI.2024.3411693}}
 ```
