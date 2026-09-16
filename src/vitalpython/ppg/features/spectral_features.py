@@ -10,6 +10,9 @@ SoftwareX, 11 (2020), p. 100456
 
 import scipy
 import numpy as np
+
+# scipy.signal.ricker/cwt were removed in SciPy 1.15; see _scipy_compat.
+from .._scipy_compat import ricker as _ricker, cwt as _cwt
 from biosppy.signals import ecg
 
 N_SEG = 200  # biosppy.signals.ecg.fSQI input parameter
@@ -634,7 +637,7 @@ def spectral_entropy(signal: np.ndarray, fs: int):
     return -np.multiply(prob, np.log2(prob)).sum() / np.log2(prob.size)
 
 
-def wavelet_entropy(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet_entropy(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """ Computes CWT entropy of the signal.
         Implementation details in:
         https://dsp.stackexchange.com/questions/13055/how-to-calculate-cwt-shannon-entropy
@@ -660,7 +663,7 @@ def wavelet_entropy(signal: np.ndarray, function=scipy.signal.ricker, widths=np.
     return w_entropy
 
 
-def wavelet_abs_mean(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet_abs_mean(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """Computes CWT absolute mean value of each wavelet scale.
 
     Args:
@@ -675,7 +678,7 @@ def wavelet_abs_mean(signal: np.ndarray, function=scipy.signal.ricker, widths=np
     return tuple(np.abs(np.mean(wavelet(signal, function, widths), axis=1)))
 
 
-def wavelet_std(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet_std(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """Computes CWT std value of each wavelet scale.
 
     Args:
@@ -690,7 +693,7 @@ def wavelet_std(signal: np.ndarray, function=scipy.signal.ricker, widths=np.aran
     return tuple((np.std(wavelet(signal, function, widths), axis=1)))
 
 
-def wavelet_var(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet_var(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """Computes CWT variance value of each wavelet scale.
 
     Args:
@@ -707,7 +710,7 @@ def wavelet_var(signal: np.ndarray, function=scipy.signal.ricker, widths=np.aran
 
 # COMPLEMENTARY FUNCTIONS
 
-def wavelet_energy(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet_energy(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """ Computes CWT energy of each wavelet scale.
         Implementation details:
         https://stackoverflow.com/questions/37659422/energy-for-1-d-wavelet-in-python
@@ -789,7 +792,7 @@ def filterbank(signal: np.ndarray, fs, pre_emphasis=0.97, nfft=512, nfilt=40):
     return filter_banks
 
 
-def wavelet(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1, 10)):
+def wavelet(signal: np.ndarray, function=_ricker, widths=np.arange(1, 10)):
     """Computes CWT (continuous wavelet transform) of the signal.
 
     Args:
@@ -807,7 +810,7 @@ def wavelet(signal: np.ndarray, function=scipy.signal.ricker, widths=np.arange(1
     if isinstance(widths, str):
         widths = eval(widths)
 
-    cwt = scipy.signal.cwt(signal, function, widths)
+    cwt = _cwt(signal, function, widths)
 
     return cwt
 
